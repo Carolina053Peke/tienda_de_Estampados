@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="vendor/pgwmodal/pgwmodal.min.css" rel="stylesheet">
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    
+    <title>Wild Fashion</title>
+</head>
+<body>
+
+
+<!-- Section 1 -->
+    <section class="main-container">
+        <div class="row">
+            <div class="column turquoise-color">
+                <div>
+                    <h1>Wild Fashion</h1>
+                    <p class="slogan">Custom Your Design</p>
+                </div>
+
+                <div class="large-12 columns">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img class="img-carousel" src="images/1.png" alt="Joker"/>
+                        </div>
+                    
+                    <div class="item">
+                        <img class="img-carousel" src="images/2.png" alt="IT Baloon"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/3.png" alt="Pulp Fiction"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/4.png" alt="IT face"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/5.png" alt="Stranger Things"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/6.png" alt="Suicide Squad"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/7.png" alt="Babadook"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/8.png" alt="Robot"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/9.png" alt="IT smile"/>
+                    </div>
+                    <div class="item">
+                        <img class="img-carousel" src="images/10.png" alt="Dark IT"/>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="demo-image">
+                    <img class="tshirt-selected" src="images/placeholder.jpeg"/>
+                    <div class="container-btn1">
+                        <button id="btnPrincipal">Continue</button>
+                    </div>
+
+                    <div class="message-errorContinue">
+                        <p class="continue-error message-hidden">Please select an image to advance with the order</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> 
+<!-- Fin Section 1 -->
+
+
+<!-- Section 2 -->
+<section class="container-2">
+
+    <div class="third-title">
+        <h3>Description</h3>
+    </div>
+
+        <div class="price">
+            <p class="listPrice">List Price: $890.-</p>
+        </div>
+
+        <div class="paragraph1">
+            <p class="parag1"></p>
+                Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester
+                Machine Wash. 
+            </p>
+        </div>
+    
+
+    <div class="second-title">
+        <h2>Size Chart</h2>
+    </div>
+
+    <div id="btns-size">
+        <button onclick="sizeSelector(event)" class="btn-size" value="s">S</button>
+        <button onclick="sizeSelector(event)" class="btn-size" value="m" >M</button>
+        <button onclick="sizeSelector(event)" class="btn-size" value="l">L</button>
+    </div>
+    <div class="message-errorSize message-hidden">
+        <p class="m-error">Please select a size</p>
+    </div>
+
+    <div class="counter">
+        <div>
+            <label for="points">Qty:</label>
+            <input class="calc" type="number" min="1"id="points" name="points" step="1" value="">
+            <!--<input type="submit">-->
+        </div>
+    </div>
+   <div class="message-errorQuantity message-hidden">
+       <p class="m-error">Please select a quantity</p>
+   </div>
+
+    <div class="add-product">
+        <button class="addToCart">Add to cart</button>
+    </div>
+</section>
+<!-- Fin Section 2 -->
+
+
+<!-- Section 3 -->
+
+<section class="container-3">
+    
+    <div class="contact-form"> Fill out the Contact Form</div>     
+
+    <div class="container-form">
+
+        <form id="contactForm" action="http://google.com" class="fill-form">
+            <div class="fields">
+                <div class="fieldText">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Your Name" id="name" >
+                </div>
+    
+                <div class="fieldEmail">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Your Email" id="email" >
+                </div>
+    
+                <div clas="fieldMessage">
+                    <label for="message">Message</label>
+                    <textarea type= "message" placeholder="Message" id="message" rows="5"></textarea>
+                </div>
+    
+                <div class="container btnSubmit"> 
+                    <input class="btnForm" type="submit" value="Send">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<div id="modalContent">
+    <p class="strong">Wild T-Shirt</p>
+    <p class="t-shirtTotal" id="total"></p>
+
+    <div class="tshirt-image-cart">
+        <img class="tshirt-selected-cart" src="images/placeholder.jpeg"/>
+    </div>
+
+    <!-- payment button y form -->
+    <div class="payment-btn">
+        <button class="payment">Pay</button>
+    </div>
+</div>
+
+<!-- Fin Section 3 -->
+
+
+<!-- Scripts -->
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/pgwmodal/pgwmodal.min.js"></script>
+    
+    <script src="owlcarousel/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                items: 3,
+                nav: true
+                },
+                600: {
+                items: 3,
+                nav: false
+                },
+                1000: {
+                items: 3,
+                nav: true,
+                loop: false,
+                margin: 20
+                }
+            }
+            });
+
+        })
+    </script>
+    <script src="app.js"></script>
+
+</body>
+
+
+</html>
